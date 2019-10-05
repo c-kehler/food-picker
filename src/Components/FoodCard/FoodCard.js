@@ -50,9 +50,14 @@ class FoodCard extends Component {
 
   handleButton = () => {
     let foodOptions = Object.keys(this.state.selected);
-    this.setState({
-      picked: foodOptions[Math.floor(Math.random() * foodOptions.length)]
-    });
+    let foodBoolean = Object.values(this.state.selected);
+    let random = Math.floor(Math.random() * foodOptions.length);
+    if (foodBoolean[random] === true) {
+      var toPick = foodOptions[random];
+      this.setState({
+        picked: toPick
+      });
+    }
   };
 
   render() {
