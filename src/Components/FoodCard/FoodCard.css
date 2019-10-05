@@ -10,6 +10,7 @@
     justify-content: center;
     margin: 0 auto;
     width: 60%;
+    max-width: 60rem;
   }
 }
 .food-cards-container .foodcard {
@@ -25,6 +26,7 @@
   background: #e8e8e8;
   border-radius: 6px;
   transition: 0.2s;
+  cursor: pointer;
 }
 @media (min-width: 1025px) {
   .food-cards-container .foodcard {

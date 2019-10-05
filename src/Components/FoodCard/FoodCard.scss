@@ -8,6 +8,7 @@
     justify-content: center;
     margin: 0 auto;
     width: 60%;
+    max-width: 60rem;
   }
   .foodcard {
     display: flex;
@@ -24,6 +25,7 @@
     background: #e8e8e8;
     border-radius: 6px;
     transition: 0.2s;
+    cursor: pointer;
     @media (min-width: 1025px) {
       width: 10rem;
       height: 2.5rem;
