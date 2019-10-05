@@ -48,6 +48,7 @@ class FoodCard extends Component {
       </div>
     );
   }
+
   handleButton = () => {
     let foodOptions = Object.keys(this.state.selected);
     this.setState({
@@ -76,8 +77,12 @@ class FoodCard extends Component {
         <div className="food-cards-container">
           {this.state.data.map(this.renderItem)}
         </div>
+
+        <div className="picked">
+          {this.state.picked ? this.state.picked : "What are you going to eat?"}
+        </div>
+
         <button onClick={this.handleButton}>Pick for me!</button>
-        <div>{this.state.picked}</div>
       </React.Fragment>
     );
   }
