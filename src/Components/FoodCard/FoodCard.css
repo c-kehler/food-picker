@@ -5,10 +5,15 @@
 }
 .food-cards-container .foodcard {
   width: 80%;
-  border: 1px solid black;
+  color: darkgray;
+  border: 1px solid dimgray;
   font-size: 18px;
   padding: 20px 15px;
   margin-bottom: 15px;
+}
+.food-cards-container .active {
+  border: 1px solid black;
+  color: black;
 }
 
 /*# sourceMappingURL=foodcard.css.map */
