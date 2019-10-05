@@ -7,6 +7,8 @@ class FoodCard extends Component {
     this.state = {
       selected: {},
       data: [
+        "American",
+        "Bagels",
         "Burgers",
         "Chinese",
         "French",
@@ -16,25 +18,22 @@ class FoodCard extends Component {
         "Mexican",
         "Pizza",
         "Ramen",
+        "Sandwiches",
         "Spanish",
         "Sushi",
-        "Thai"
+        "Thai",
+        "Wings"
       ],
       picked: ""
     };
-    this.selectItem = this.selectItem.bind(this);
-    this.renderItem = this.renderItem.bind(this);
   }
-  handleClick(i, event) {
-    alert(i);
-    this.setState({ selected: true });
-  }
-  selectItem(el) {
+
+  selectItem = el => {
     var selected = this.state.selected;
     selected[el] = !selected[el];
     this.setState({ selected: selected });
-  }
-  renderItem(el) {
+  };
+  renderItem = el => {
     var className = this.state.selected[el] ? "active" : "inactive";
     var onClick = this.selectItem.bind(this, el);
     return (
@@ -47,7 +46,7 @@ class FoodCard extends Component {
         {el}
       </div>
     );
-  }
+  };
 
   handleButton = () => {
     let foodOptions = Object.keys(this.state.selected);
@@ -57,20 +56,6 @@ class FoodCard extends Component {
   };
 
   render() {
-    let foodList = [
-      "Burgers",
-      "Chinese",
-      "French",
-      "Indian",
-      "Italian",
-      "Korean",
-      "Mexican",
-      "Pizza",
-      "Ramen",
-      "Spanish",
-      "Sushi",
-      "Thai"
-    ];
     return (
       <React.Fragment>
         <ul></ul>

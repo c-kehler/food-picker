@@ -42,11 +42,16 @@ button {
   background: linear-gradient(180deg, #0020c6 0%, #001583 100%), #ffffff;
   border: none;
   width: 15rem;
-  height: 2.5rem;
+  height: 3rem;
+  font-size: 18px;
   border-radius: 6px;
   color: white;
   margin-bottom: 1rem;
   transition: 0.5s;
+  @media (min-width: 1025px) {
+    height: 2.5rem;
+    font-size: inherit;
+  }
   &:active {
     background: linear-gradient(180deg, #6172c9 0%, #475183 100%), #ffffff;
     outline: none;
