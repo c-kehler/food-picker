@@ -1,0 +1,14 @@
+.food-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.food-cards-container .foodcard {
+  width: 80%;
+  border: 1px solid black;
+  font-size: 18px;
+  padding: 20px 15px;
+  margin-bottom: 15px;
+}
+
+/*# sourceMappingURL=foodcard.css.map */
