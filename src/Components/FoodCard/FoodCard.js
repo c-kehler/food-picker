@@ -34,6 +34,16 @@ class FoodCard extends Component {
     selected[el] = !selected[el];
     this.setState({ selected: selected });
   };
+  selectAll = () => {
+    let selectAllObject = this.state.data.reduce(
+      (a, key) => Object.assign(a, { [key]: true }),
+      {}
+    );
+    this.setState({ selected: selectAllObject });
+  };
+  selectNone = () => {
+    this.setState({ selected: {} });
+  };
   renderItem = el => {
     var className = this.state.selected[el] ? "active" : "inactive";
     var onClick = this.selectItem.bind(this, el);
@@ -60,6 +70,7 @@ class FoodCard extends Component {
       ].sort()
     });
     event.preventDefault();
+    this.setState({ value: "" });
   };
 
   handleButton = () => {
@@ -86,6 +97,10 @@ class FoodCard extends Component {
   render() {
     return (
       <React.Fragment>
+        <div className="select-all-none-container">
+          <div onClick={this.selectAll}>Select All</div>
+          <div onClick={this.selectNone}>None</div>
+        </div>
         <div className="food-cards-container">
           {this.state.data.map(this.renderItem)}
         </div>

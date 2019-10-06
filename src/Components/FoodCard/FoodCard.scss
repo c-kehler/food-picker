@@ -1,3 +1,25 @@
+.select-all-none-container {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  margin: 1.5rem 1.5rem;
+  max-width: 10rem;
+  @media (min-width: 1025px) {
+    margin: 0 auto;
+    max-width: 50rem;
+    padding: 20px;
+  }
+  div {
+    margin-right: 1rem;
+    text-decoration: underline;
+    color: navy;
+    cursor: pointer;
+    &:active {
+      color: rgb(80, 80, 201);
+    }
+  }
+}
+
 .food-cards-container {
   display: flex;
   flex-direction: column;
