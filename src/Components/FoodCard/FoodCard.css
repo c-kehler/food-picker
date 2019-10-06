@@ -99,6 +99,7 @@ form {
   form input {
     border-radius: 6px 0px 0px 6px;
     border: 1px solid #b3b3b3;
+    border-right: none;
     height: 2.5rem;
     padding: 0.2rem 0.5rem;
     font-size: 18px;
