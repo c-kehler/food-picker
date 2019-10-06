@@ -107,7 +107,7 @@ class FoodCard extends Component {
 
         <div className="picked">
           {this.state.picked
-            ? "We Picked: " + this.state.picked
+            ? "We Pick: " + this.state.picked
             : "What are you going to eat?"}
         </div>
 

@@ -106,7 +106,7 @@ form {
     width: 80%; }
     @media (min-width: 1025px) {
       form input {
-        height: 2rem; } }
+        height: 1.98rem; } }
     form input:active {
       outline: none; }
     form input:focus {
