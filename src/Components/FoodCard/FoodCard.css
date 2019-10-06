@@ -48,7 +48,7 @@ button {
   font-size: 1.5rem;
   border-radius: 6px;
   color: white;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   transition: 0.5s;
 }
 @media (min-width: 1025px) {
@@ -83,6 +83,42 @@ button:focus {
   100% {
     opacity: 1;
   }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+@media (min-width: 1025px) {
+  form {
+    margin-bottom: 1rem;
+  }
+}
+form input {
+  border-radius: 6px 0px 0px 6px;
+  border: 1px solid #b3b3b3;
+  height: 2.5rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 18px;
+  width: 10.9rem;
+}
+@media (min-width: 1025px) {
+  form input {
+    height: 2rem;
+  }
+}
+form input:active {
+  outline: none;
+}
+form input:focus {
+  outline: none;
+  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.39);
+}
+form .add-button {
+  font-size: 2rem;
+  width: 3rem;
+  border-radius: 0px 6px 6px 0px;
 }
 
 /*# sourceMappingURL=FoodCard.css.map */
