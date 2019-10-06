@@ -115,7 +115,13 @@ class FoodCard extends Component {
         <form onSubmit={this.handleSubmit}>
           {" "}
           <input value={this.state.value} onChange={this.handleChange}></input>
-          <button className="add-button">+</button>
+          <button className="add-button">
+            <span
+              class="iconify"
+              data-icon="emojione-monotone:plus-sign"
+              data-inline="false"
+            ></span>
+          </button>
         </form>
       </React.Fragment>
     );
