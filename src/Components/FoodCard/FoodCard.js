@@ -65,6 +65,14 @@ class FoodCard extends Component {
   handleButton = () => {
     let foodOptions = Object.keys(this.state.selected);
     let foodBoolean = Object.values(this.state.selected);
+    let checker = foodBoolean.every(v => v === false);
+
+    if (checker === true) {
+      this.setState({
+        picked: "Nothing, you have to select options!"
+      });
+      return;
+    }
     let random = Math.floor(Math.random() * foodOptions.length);
     while (foodBoolean[random] === false) {
       random = Math.floor(Math.random() * foodOptions.length);
