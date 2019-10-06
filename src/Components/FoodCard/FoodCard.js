@@ -24,7 +24,8 @@ class FoodCard extends Component {
         "Thai",
         "Wings"
       ],
-      picked: ""
+      picked: "",
+      value: ""
     };
   }
 
@@ -46,6 +47,19 @@ class FoodCard extends Component {
         {el}
       </div>
     );
+  };
+
+  handleChange = event => {
+    this.setState({ value: event.target.value });
+  };
+  handleSubmit = event => {
+    this.setState({
+      data: [
+        ...this.state.data,
+        this.state.value.replace(/^\w/, c => c.toUpperCase())
+      ].sort()
+    });
+    event.preventDefault();
   };
 
   handleButton = () => {
@@ -76,6 +90,11 @@ class FoodCard extends Component {
         </div>
 
         <button onClick={this.handleButton}>Pick for me!</button>
+        <form onSubmit={this.handleSubmit}>
+          {" "}
+          <input value={this.state.value} onChange={this.handleChange}></input>
+          <button className="add-button">+</button>
+        </form>
       </React.Fragment>
     );
   }
