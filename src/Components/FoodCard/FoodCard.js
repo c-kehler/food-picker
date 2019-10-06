@@ -52,12 +52,13 @@ class FoodCard extends Component {
     let foodOptions = Object.keys(this.state.selected);
     let foodBoolean = Object.values(this.state.selected);
     let random = Math.floor(Math.random() * foodOptions.length);
-    if (foodBoolean[random] === true) {
-      var toPick = foodOptions[random];
-      this.setState({
-        picked: toPick
-      });
+    while (foodBoolean[random] === false) {
+      random = Math.floor(Math.random() * foodOptions.length);
     }
+    var toPick = foodOptions[random];
+    this.setState({
+      picked: toPick
+    });
   };
 
   render() {
