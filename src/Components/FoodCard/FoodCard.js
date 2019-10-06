@@ -78,7 +78,6 @@ class FoodCard extends Component {
   render() {
     return (
       <React.Fragment>
-        <ul></ul>
         <div className="food-cards-container">
           {this.state.data.map(this.renderItem)}
         </div>
