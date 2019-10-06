@@ -105,7 +105,9 @@ button {
 form {
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   margin-bottom: 4rem;
+  width: 15rem;
   @media (min-width: 1025px) {
     margin-bottom: 1rem;
   }
@@ -129,6 +131,9 @@ form {
     }
   }
   .add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 2rem;
     width: 3rem;
     border-radius: 0px 6px 6px 0px;
